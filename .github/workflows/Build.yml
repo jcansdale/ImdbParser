@@ -21,8 +21,9 @@ jobs:
         uses: NuGet/setup-nuget@v1.0.2
 
       - name: Add NuGet Source
-        run: nuget sources Add -Name GitHub -Password ${{ secrets.GITHUB_TOKEN }} -Source https://nuget.pkg.github.com/${{ github.event.repository.owner.name }}/index.json
-          -Username ${{ github.event.repository.owner.name }}
+        run: |
+          nuget sources List
+          nuget sources Add -Name GitHub -Password ${{ secrets.GITHUB_TOKEN }} -Source https://nuget.pkg.github.com/${{ github.event.repository.owner.name }}/index.json -Username ${{ github.event.repository.owner.name }}
 
       - name: Build
         env:
