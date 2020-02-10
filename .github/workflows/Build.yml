@@ -17,6 +17,13 @@ jobs:
         with:
           dotnet-version: 3.1.100
 
+      - name: Setup NuGet.exe
+        uses: NuGet/setup-nuget@v1.0.2
+
+      - name: Add NuGet Source
+        run: nuget sources Add -Password ${{ secrets.GITHUB_TOKEN }} -Source https://nuget.pkg.github.com/${{ github.event.repository.owner.name }}/index.json
+          -Username ${{ github.event.repository.owner.name }}
+
       - name: Build
         env:
           DOTNET_CLI_TELEMETRY_OPTOUT: true
