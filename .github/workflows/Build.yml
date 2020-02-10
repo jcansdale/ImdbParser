@@ -22,7 +22,7 @@ jobs:
 
       - name: Add NuGet Source
         run: |
-          nuget sources Remove -Name nuget.org
+          nuget sources Disable -Name nuget.org
           nuget sources List
           nuget sources Add -Name GitHub -Password ${{ secrets.GITHUB_TOKEN }} -Source https://nuget.pkg.github.com/${{ github.event.repository.owner.name }}/index.json -Username ${{ github.event.repository.owner.name }}
 
