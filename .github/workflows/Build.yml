@@ -24,7 +24,7 @@ jobs:
         run: |
           nuget sources List
           nuget sources Disable -Name nuget.org
-          nuget sources Add -Name GitHub -Password "19e201fb4266f765fb19b28b8a17ee90c2156e97" -Source https://nuget.pkg.github.com/${{ github.event.repository.owner.name }}/index.json \
+          nuget sources Add -Name GitHub -Password ${{ secrets.GITHUB_TOKEN }} -Source https://nuget.pkg.github.com/${{ github.event.repository.owner.name }}/index.json \
             -Username ${{ github.event.repository.owner.name }}
           nuget sources List
 
