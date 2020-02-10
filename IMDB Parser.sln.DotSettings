@@ -50,6 +50,8 @@
   <s:Boolean x:Key="/Default/CodeInspection/Highlighting/IncludeWarningsInSwea/@EntryValue">True</s:Boolean>
     <!--Highlighting-->
   <s:Boolean x:Key="/Default/CodeInspection/Highlighting/IdentifierHighlightingEnabled/@EntryValue">True</s:Boolean>
+  <!--##Ignored Code-->
+  <s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=B334AE73_002DBF93_002D4D1D_002D98D3_002D5F64FB429332_002Ff_003AMessages_002Eresx/@EntryIndexedValue">ExplicitlyExcluded</s:String>
   <!--##Inspection Severity-->
     <!--C++-->
       <!--Clang-Tidy Checks-->
@@ -2850,7 +2852,15 @@
   <s:Boolean x:Key="/Default/CodeEditing/StackTraceExplorer/WrapLines/@EntryValue">True</s:Boolean>
   <!--##ReSpeller-->
   <s:Boolean x:Key="/Default/UserDictionary/Words/=Casted/@EntryIndexedValue">True</s:Boolean>
+  <!--International movie database.-->
+  <s:Boolean x:Key="/Default/UserDictionary/Words/=IMDB/@EntryIndexedValue">True</s:Boolean>
   <s:Boolean x:Key="/Default/UserDictionary/Words/=Retrier/@EntryIndexedValue">True</s:Boolean>
+  <!--Setting values.-->
+  <s:Boolean x:Key="/Default/UserDictionary/Words/=Aktoriai/@EntryIndexedValue">True</s:Boolean>
+  <s:Boolean x:Key="/Default/UserDictionary/Words/=Biblioteka/@EntryIndexedValue">True</s:Boolean>
+  <s:Boolean x:Key="/Default/UserDictionary/Words/=Metai/@EntryIndexedValue">True</s:Boolean>
+  <s:Boolean x:Key="/Default/UserDictionary/Words/=Režisieriai/@EntryIndexedValue">True</s:Boolean>
+  <s:Boolean x:Key="/Default/UserDictionary/Words/=Žanrai/@EntryIndexedValue">True</s:Boolean>
   <!--##dotCover-->
   <!--###Filtering-->
     <!--Runtime coverage filters-->

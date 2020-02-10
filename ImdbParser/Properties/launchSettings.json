@@ -1,0 +1,28 @@
+{
+  "profiles": {
+    "Add": {
+      "commandName": "Project",
+      "commandLineArgs": "-Add <Path to movie>"
+    },
+    "Create": {
+      "commandName": "Project",
+      "commandLineArgs": "-Create <IMDB URL> -Language <Lt/En> -Link <Path to movie> {-Subtitles <Lt/En>}"
+    },
+    "Extract": {
+      "commandName": "Project",
+      "commandLineArgs": "-Extract <Path to movie>"
+    },
+    "Gather": {
+      "commandName": "Project",
+      "commandLineArgs": "-Gather <IMDB URL> -Language <Lt/En> {-Subtitles <Lt/En>}"
+    },
+    "Remove": {
+      "commandName": "Project",
+      "commandLineArgs": "-Remove <Current file to remove>"
+    },
+    "Rename": {
+      "commandName": "Project",
+      "commandLineArgs": "-Rename <Current file to rename> <Path to movie for new shortcut>"
+    }
+  }
+}

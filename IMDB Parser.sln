@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImdbParser", "ImdbParser\ImdbParser.csproj", "{B334AE73-BF93-4D1D-98D3-5F64FB429332}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImdbParser.IntegrationTests", "ImdbParser.IntegrationTests\ImdbParser.IntegrationTests.csproj", "{B8A1EE60-2248-407D-8DF9-90CB7A4AA001}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImdbParser.Tests", "ImdbParser.Tests\ImdbParser.Tests.csproj", "{AFC3B72C-2A70-4DA6-B72C-DA0B794B6E3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{252FB04D-7A80-4484-BF9C-BB1C24DF32D8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.github\workflows\Build.yml = .github\workflows\Build.yml
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build properties", "Build properties", "{996DDF37-F3E4-4AE3-BD52-007077F9CBB4}"
+	ProjectSection(SolutionItems) = preProject
+		Build properties\Base.props = Build properties\Base.props
+		Build properties\CodeAnalysis.props = Build properties\CodeAnalysis.props
+		Build properties\NetCoreBase.props = Build properties\NetCoreBase.props
+		Build properties\NetStandardBase.props = Build properties\NetStandardBase.props
+		Build properties\NetStandardCodeAnalysis.props = Build properties\NetStandardCodeAnalysis.props
+		Build properties\Tests.props = Build properties\Tests.props
+		Build properties\TestsCodeAnalysis.props = Build properties\TestsCodeAnalysis.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code analysis rulesets", "Code analysis rulesets", "{A9E62765-B3AE-4711-A072-8AA5AFAF8C3C}"
+	ProjectSection(SolutionItems) = preProject
+		Code analysis rulesets\.NET Standard.ruleset = Code analysis rulesets\.NET Standard.ruleset
+		Code analysis rulesets\Tests.ruleset = Code analysis rulesets\Tests.ruleset
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code style", "Code style", "{5D2673EB-350D-4D8E-9604-632CDD79ABA9}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		IMDB Parser.sln.DotSettings = IMDB Parser.sln.DotSettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B334AE73-BF93-4D1D-98D3-5F64FB429332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B334AE73-BF93-4D1D-98D3-5F64FB429332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B334AE73-BF93-4D1D-98D3-5F64FB429332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B334AE73-BF93-4D1D-98D3-5F64FB429332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A1EE60-2248-407D-8DF9-90CB7A4AA001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A1EE60-2248-407D-8DF9-90CB7A4AA001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A1EE60-2248-407D-8DF9-90CB7A4AA001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A1EE60-2248-407D-8DF9-90CB7A4AA001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC3B72C-2A70-4DA6-B72C-DA0B794B6E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC3B72C-2A70-4DA6-B72C-DA0B794B6E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC3B72C-2A70-4DA6-B72C-DA0B794B6E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC3B72C-2A70-4DA6-B72C-DA0B794B6E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{996DDF37-F3E4-4AE3-BD52-007077F9CBB4} = {252FB04D-7A80-4484-BF9C-BB1C24DF32D8}
+		{A9E62765-B3AE-4711-A072-8AA5AFAF8C3C} = {252FB04D-7A80-4484-BF9C-BB1C24DF32D8}
+		{5D2673EB-350D-4D8E-9604-632CDD79ABA9} = {252FB04D-7A80-4484-BF9C-BB1C24DF32D8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7092C15F-F724-4F0B-A3FD-FEF0A3457DEE}
+	EndGlobalSection
+EndGlobal

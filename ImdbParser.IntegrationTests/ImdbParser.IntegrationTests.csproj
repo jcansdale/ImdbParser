@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\Build properties\Tests.props" />
+  <Import Project="..\Build properties\TestsCodeAnalysis.props" />
+  <ItemGroup>
+    <PackageReference Include="Core" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" />
+    <ProjectReference Include="..\ImdbParser\ImdbParser.csproj" />
+  </ItemGroup>
+</Project>
