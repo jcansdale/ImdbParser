@@ -24,12 +24,13 @@ jobs:
         run: nuget sources Add -Name GitHub -Password ${{ secrets.GITHUB_TOKEN }} -Source https://nuget.pkg.github.com/${{ github.event.repository.owner.name }}/index.json 
           -Username ${{ github.event.repository.owner.name }}
 
+      - name: NuGet Restore
+        run: nuget restore "IMDB Parser.sln"
+
       - name: Build
         env:
           DOTNET_CLI_TELEMETRY_OPTOUT: true
-        run: |
-          nuget restore "IMDB Parser.sln"
-          dotnet build --configuration Release
+        run: dotnet build --configuration Release
 
       - name: Test
         run: dotnet test ImdbParser.Tests --configuration Release --no-build /p:CollectCoverage=true /p:ExcludeByAttribute=GeneratedCodeAttribute /p:CoverletOutputFormat=lcov
