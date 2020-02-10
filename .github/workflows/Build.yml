@@ -26,6 +26,7 @@ jobs:
           nuget sources Remove -Name nuget.org
           nuget sources Add -Name GitHub -Password ${{ secrets.GITHUB_TOKEN }} -Source https://nuget.pkg.github.com/${{ github.event.repository.owner.name }}/index.json \
             -Username ${{ github.event.repository.owner.name }}
+          nuget sources List
 
       - name: NuGet Restore
         run: nuget restore "IMDB Parser.sln"
