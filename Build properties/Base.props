@@ -1,0 +1,25 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!--Build-->
+      <!--Errors and warnings-->
+    <NoWarn />
+      <!--Treat warnings as errors-->
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+      <!--Advanced...-->
+        <!--General-->
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <!--Package-->
+    <Authors>Dovydas Šopa</Authors>
+    <Copyright>Copyright © 2020 $(Authors)</Copyright>
+    <!--Options-->
+    <Nullable>enable</Nullable>
+    <!--Variables-->
+    <!--.NET Core version used.-->
+    <DotNetCoreVersion>netcoreapp3.1</DotNetCoreVersion>
+    <!--.NET Standard version used.-->
+    <DotNetStandardVersion>netstandard2.1</DotNetStandardVersion>
+    <!--Identifies if this solution is loaded in GitHub actions.-->
+    <!-- ReSharper disable once UnknownProperty -->
+    <IsGitHubAction Condition="'$(GITHUB_ACTION)' != ''">true</IsGitHubAction>
+  </PropertyGroup>
+</Project>

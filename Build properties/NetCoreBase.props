@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="Base.props" />
+  <PropertyGroup>
+    <!--Application-->
+    <!-- ReSharper disable once UnknownProperty -->
+    <TargetFramework>$(DotNetCoreVersion)</TargetFramework>
+    <!--Build-->
+      <!--Output-->
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+</Project>
