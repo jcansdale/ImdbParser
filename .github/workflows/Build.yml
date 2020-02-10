@@ -30,7 +30,9 @@ jobs:
       - name: Build
         env:
           DOTNET_CLI_TELEMETRY_OPTOUT: true
-        run: dotnet build --configuration Release
+        run: |
+          nuget restore IMDB Parser.sln
+          dotnet build --configuration Release
 
       - name: Test
         run: dotnet test ImdbParser.Tests --configuration Release --no-build /p:CollectCoverage=true /p:ExcludeByAttribute=GeneratedCodeAttribute /p:CoverletOutputFormat=lcov
