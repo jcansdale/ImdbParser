@@ -17,13 +17,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Set API Key for GitHub Package Registry
+        run: tools/gpr setApiKey ${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1.4.0
         with:
           dotnet-version: 3.1.100
-
-      - name: Set API Key for GitHub Package Registry
-        run: tools/gpr setApiKey ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
         run: dotnet build --configuration Release
