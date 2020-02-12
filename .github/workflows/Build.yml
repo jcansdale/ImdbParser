@@ -12,6 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1.4.0
+        with:
+          dotnet-version: 3.1.100
+
       - name: Install GPR Tool
         env:
           DOTNET_CLI_TELEMETRY_OPTOUT: true
@@ -22,14 +27,7 @@ jobs:
         #run: ~/tools/gpr setApiKey ${{ secrets.GITHUB_TOKEN }}
         run: tools/gpr setApiKey ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1.4.0
-        with:
-          dotnet-version: 3.1.100
-
       - name: Build
-        env:
-          DOTNET_CLI_TELEMETRY_OPTOUT: true
         run: dotnet build --configuration Release
 
       - name: Test
