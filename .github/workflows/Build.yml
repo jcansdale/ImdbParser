@@ -23,9 +23,7 @@ jobs:
           dotnet-version: 3.1.100
 
       - name: Set API Key for GitHub Package Registry
-        run: |
-          tools/gpr
-          tools/gpr setApiKey ${{ secrets.GITHUB_TOKEN }}
+        run: ./tools/gpr setApiKey ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
         env:
