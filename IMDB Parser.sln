@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		.github\workflows\Build.yml = .github\workflows\Build.yml
+		NuGet.config = NuGet.config
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
