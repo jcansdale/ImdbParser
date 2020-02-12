@@ -18,14 +18,14 @@ jobs:
           dotnet-version: 3.1.100
 
       - name: Install GPR Tool
+        env:
+          DOTNET_CLI_TELEMETRY_OPTOUT: true
         run: dotnet tool install gpr --tool-path tools
 
-      - name: Set API key for GitHub Package Registry
+      - name: Set API Key for GitHub Package Registry
         run: tools/gpr setApiKey ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
-        env:
-          DOTNET_CLI_TELEMETRY_OPTOUT: true
         run: dotnet build --configuration Release
 
       - name: Test
