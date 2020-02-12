@@ -9,14 +9,14 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Install GPR Tool
         env:
           DOTNET_CLI_TELEMETRY_OPTOUT: true
         #run: dotnet tool install gpr --tool-path ~/tools
         run: dotnet tool install gpr --tool-path tools
-
-      - name: Checkout
-        uses: actions/checkout@v2
 
       - name: Set API Key for GitHub Package Registry
         #run: ~/tools/gpr setApiKey ${{ secrets.GITHUB_TOKEN }}
